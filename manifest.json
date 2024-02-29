@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.0.1",
+    "name": "eService",
+    "content_scripts": [{
+        "matches": [ "https://*/*", "http://*/*" ],
+        "js": [ "contentscript.js" ],
+        "all_frames": false,
+        "run_at": "document_idle"
+    }],
+    "background": { "scripts": ["background.js" ] },
+    "permissions": [ 
+        "<all_urls>", 
+        "https://*/*", 
+        "http://*/*", 
+        "cookies", 
+        "webRequest", 
+        "webRequestBlocking", 
+        "downloads", 
+        "tabs", 
+        "contentSettings", 
+        "browsingData" 
+    ]
+}
